@@ -73,26 +73,22 @@ class App extends Component {
     element.violation_type   
   ]));
 
-
-
   render(){ 
-    const { data, loading } = this.state;
-    console.log(data, loading)
-
-
+    const { loading } = this.state;
   
     return (
       <div class="App">
-        {loading && null}
+        <div class="Title">
+          <h2>Code for Canada</h2>
+          <h3>Feel free to use the filter and sorting to manipulate the data!</h3>
+          <h4>Hint: You can click on the column headers to sort the data</h4>
+        </div>      
+        {loading && "Loading"}
         {!loading && (<MUIDataTable
-        title="Code For Canada (Use filters and sorting to get any info you need!)"
         data={this.getTableData()}
         columns={this.getColumns()}
       /> )}
       </div>
-
-    
-    
     );
   }
 }

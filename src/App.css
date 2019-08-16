@@ -1,4 +1,8 @@
 .App {
-  text-align: center;
   padding: 50px;
+  background: #30c5ff;
+}
+
+.Title {
+  color: white;
 }
